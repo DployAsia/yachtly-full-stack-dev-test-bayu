@@ -1,8 +1,35 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css');
+
+html,
+body,
+.container-table {
+    height: 100%;
 }
 
-a {
-  color: #00B7FF;
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+
+
+/* TABLE HANDLER */
+
+.custab {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    transition: 0.5s;
+}
+
+.custab:hover {
+    transition: 0.5s;
 }

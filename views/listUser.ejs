@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+</head>
+
+<body ng-app="Yachtly">
+    <div ng-controller="UserListController" class="container container-table">
+        <div class="row vertical-center-row">
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                        <button type="button" class="btn btn-xs btn-primary" ng-click="back()"><i class="icon-arrow-left icon-white"></i> Back</button>
+                        <button type="button" class="btn btn-xs btn-success pull-right" ng-click="addUser()"><i class="icon-plus icon-white"></i> Add New User</button>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone No.</th>
+                            <th>Address</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.userID}}</td>
+                        <td><strong>{{user.name}}</strong></td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phoneNumber}}</td>
+                        <td>{{user.address}}</td>
+                        <td class="text-center">
+                            <button type="button" class='btn btn-info btn-xs' ng-click="editUser(user.userID)"><i class="icon-edit icon-white"></i> Edit</button>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="delUser(user.userID)"><i class="icon-trash icon-white"></i> Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+</head>
+
+<body ng-app="Yachtly">
+    <div class="container container-table" ng-controller="HomeController">
+        <div class="row vertical-center-row">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><%= title %></h1>
+                    <p>Welcome to
+                        <%= title %>
+                    </p>
+                </div>
+                <div class="col-md-12 top-buffer">
+                    <button type="button" class="btn btn-primary custom-button-widtht" ng-click="openUserList()"><i class="icon-user icon-white"></i> View Users</button>
+                    <button type="button" class="btn btn-success custom-button-width" ng-click="openAddUser()"><i class="icon-plus icon-white"></i> Add User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
